@@ -1,6 +1,9 @@
 import "./TextResults.css"
-export const TextResults = () => {
+export const TextResults = (props) => {
+    const resultsEdith = `${props.output}`
     return (
-        <div className="info-item">Cajas de Huevo: <span className="output">output1</span></div>
+        <div className="info-item">{props.name} 
+        <span className="output">{resultsEdith}</span>
+        </div>
     )
 }
