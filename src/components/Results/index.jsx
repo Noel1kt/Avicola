@@ -1,5 +1,6 @@
 import "./Results.css"
 import { TextResults } from "./TextResults"
+import { Form } from "../Form"
 
 export const Results = () => {
     return <section className="results">
