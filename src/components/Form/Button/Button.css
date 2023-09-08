@@ -4,4 +4,13 @@
     padding: 1rem;
     font-family: 'Roboto', sans-serif;
     width: 50%;
+    margin: 1rem;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Button:hover{
+    background-color: #589ceb;
 }

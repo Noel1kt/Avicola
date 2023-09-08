@@ -15,7 +15,9 @@ export const Form = () => {
             placeholder="Edad en Semamas"
             />
 
-            <Button/>
+            <Button
+            name="Calcular"
+            />
         </form>
     )
 }

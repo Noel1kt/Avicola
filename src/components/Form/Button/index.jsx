@@ -1,7 +1,7 @@
 import "./Button.css" 
 
-export const Button = () => {
+export const Button = (props) => {
     return (
-        <button className="Button">Calcular</button>
+        <button className="Button">{props.name}</button>
     )
 }
