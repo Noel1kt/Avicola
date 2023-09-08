@@ -1,8 +1,14 @@
-export const InputForm = () => {
+import "./Inputs.css"
+
+export const InputForm = (props) => {
     return (
-        <input 
-        placeholder="Intruce No. de Gallinas"
-        className="Input"
-        ></input>
+        <div className="container">
+            <h3>{props.name}</h3>
+            <input 
+            placeholder={props.placeholder}
+            className="Input"
+            />
+        </div>
+        
     )
 }
