@@ -2,8 +2,12 @@ import "./Results.css"
 import { TextResults } from "./TextResults"
 import { Form } from "../Form"
 
-export const Results = () => {
-    return <section className="results">
+export const Results = (props) => {
+
+    const {calculos} = props
+    console.log("datos calculados",calculos)
+
+     return <section className="results">
         <div className="info">
             <TextResults 
             name="Cajas de Huevo:"

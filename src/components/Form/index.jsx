@@ -3,10 +3,12 @@ import "./Form.css"
 import { Button } from "./Button"
 import { useState } from "react"
 
-export const Form = () => {
+export const Form = (props) => {
 
     const [cantidad, setCantidad] = useState("")
     const [edad, setEdad] = useState("")
+
+    const {UsarDatos} = props
 
     const manejarEnvio = (e) => {
         e.preventDefault()
@@ -14,7 +16,7 @@ export const Form = () => {
             cantidad,
             edad
         }
-        props.UsarDatos(datosAEnviar)
+        UsarDatos(datosAEnviar)
     }
     return (
         <form className="formulary" onSubmit={manejarEnvio}>
