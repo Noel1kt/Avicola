@@ -2,20 +2,25 @@ import { Header } from "./components/Header/Header"
 import { Results } from "./components/Results"
 import { Form } from "./components/Form"
 import "./App.css"
-import { useState } from "react"
+import { useState , useEffect} from "react"
+
 
 export function App () {
-    const [datos, setDatos] = useState(null)
-    const [resultadoCajas, setResultadoCajas] = useState(null); // Nuevo estado para el resultado
+    const [datos, setDatos] = useState("____")
+    const [resultadoCajas, setResultadoCajas] = useState("------"); // Nuevo estado para el resultado
 
-    const UsarDatos = (datos) => {
-        const edad = parseInt(datos.edad);
-        const cantidad = parseInt(datos.cantidad);
-        console.log("los datos",datos)
-        setDatos(edad, cantidad);
-        const resultado = cajasDeHuevo(edad, cantidad);
-        setResultadoCajas(resultado);
-    }
+    useEffect(() => {
+        if (datos) {
+          const edad = parseInt(datos.edad);
+          const cantidad = parseInt(datos.cantidad);
+          const resultado = cajasDeHuevo(edad, cantidad);
+          setResultadoCajas(resultado);
+        }
+      }, [datos]);
+    
+      const UsarDatos = (datos) => {
+        setDatos(datos);
+      }
 
     const datosPorEdad = [
         {
@@ -52,10 +57,21 @@ export function App () {
                 // Realiza la multiplicación y devuelve el resultado
                 const resultado = cantidad * (datoEncontrado.porcentaje / 100);
                 console.log("resultado1",resultado)
-                return resultado;
+                return {
+                    resultado,
+                    porcentaje: datoEncontrado.porcentaje,
+                    consumog: datoEncontrado.consumog,
+                    cantidad: datos.cantidad,
+                };
               }else{
                 console.log("No se encontró la semana");
-                return null; // Retorna null si no se encontró coincidencia
+                return {
+                    resultado: "_____",
+                    porcentaje: "_____",
+                    consumog: "_____",
+                    cantidad:"_____",
+                  };
+            
               }
         }
     }
