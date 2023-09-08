@@ -1,13 +1,11 @@
 import { InputForm } from "./Inputs"
 import "./Form.css"
+import { Button } from "./Button"
 
 export const Form = () => {
     return (
         <form className="formulary">
-            <InputForm
-            name="Raza:"
-            placeholder="Selecciona la raza"
-            />
+
             <InputForm
             name="No. de Gallinas:"
             placeholder="Cantidad de Gallinas"
@@ -16,6 +14,8 @@ export const Form = () => {
             name="Edad en Semanas:"
             placeholder="Edad en Semamas"
             />
+
+            <Button/>
         </form>
     )
 }
