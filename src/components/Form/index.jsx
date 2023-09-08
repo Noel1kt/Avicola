@@ -3,11 +3,16 @@ import "./Form.css"
 import { Button } from "./Button"
 
 export const Form = () => {
+
+    const manejarEnvio = (e) => {
+        e.preventDefault()
+        console.log("Manejar Envío")
+    }
     return (
-        <form className="formulary">
+        <form className="formulary" onSubmit={manejarEnvio}>
 
             <InputForm
-            name="No. de Gallinas:"
+            name="Cantidad de Gallinas:"
             placeholder="Cantidad de Gallinas"
             />
             <InputForm
