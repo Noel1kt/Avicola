@@ -10,7 +10,11 @@ export const Form = () => {
 
     const manejarEnvio = (e) => {
         e.preventDefault()
-        console.log("Manejar Envío")
+        let datosAEnviar = {
+            cantidad,
+            edad
+        }
+        props.UsarDatos(datosAEnviar)
     }
     return (
         <form className="formulary" onSubmit={manejarEnvio}>
