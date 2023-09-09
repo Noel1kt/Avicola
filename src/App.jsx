@@ -93,6 +93,11 @@ export function App () {
             porcentaje: 96,
             consumog: 100,
         },
+        {
+            edad:100,
+            porcentaje: 68.5,
+            consumog: 105,
+        },
     ]
 
     const cajasDeHuevo = (edad, cantidad) => {
