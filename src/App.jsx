@@ -42,7 +42,57 @@ export function App () {
             edad:21,
             porcentaje: 63.5,
             consumog: 80,
-        }
+        },
+        {
+            edad:22,
+            porcentaje: 82,
+            consumog: 84,
+        },
+        {
+            edad:23,
+            porcentaje: 90,
+            consumog: 89,
+        },
+        {
+            edad:24,
+            porcentaje: 92.5,
+            consumog: 92.5,
+        },
+        {
+            edad:25,
+            porcentaje: 94,
+            consumog: 96,
+        },
+        {
+            edad:26,
+            porcentaje: 95,
+            consumog: 97.5,
+        },
+        {
+            edad:27,
+            porcentaje: 95.5,
+            consumog: 99,
+        },
+        {
+            edad:28,
+            porcentaje: 95.5,
+            consumog: 99.5,
+        },
+        {
+            edad:29,
+            porcentaje: 96,
+            consumog: 100,
+        },
+        {
+            edad:30,
+            porcentaje: 96,
+            consumog: 100,
+        },
+        {
+            edad:31,
+            porcentaje: 96,
+            consumog: 100,
+        },
     ]
 
     const cajasDeHuevo = (edad, cantidad) => {

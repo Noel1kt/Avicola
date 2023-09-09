@@ -26,10 +26,8 @@ export const Results = (props) => {
         
     }
 
-    
+     
       
-    
-
      return <section className="results">
         <div className="info">
             <TextResults 

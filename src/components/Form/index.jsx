@@ -28,7 +28,7 @@ export const Form = (props) => {
             setValor={setCantidad}
             />
             <InputForm
-            name="Edad en Semanas:"
+            name="Edad en Semanas (18-31):"
             placeholder="Edad en Semamas"
             valor={edad}
             setValor={setEdad}
